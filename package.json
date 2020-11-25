@@ -1,0 +1,24 @@
+{
+  "name": "discord",
+  "version": "1.0.0",
+  "description": "Discord Bot",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robert-cooper-developer/discord-bot-nov-2020.git"
+  },
+  "author": "Robert Cooper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robert-cooper-developer/discord-bot-nov-2020/issues"
+  },
+  "homepage": "https://github.com/robert-cooper-developer/discord-bot-nov-2020#readme",
+  "dependencies": {
+    "csv-parser": "^2.3.3",
+    "csv-writer": "^1.6.0",
+    "discord.js": "^12.5.0"
+  }
+}
