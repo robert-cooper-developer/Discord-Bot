@@ -42,20 +42,10 @@ bot.on('message', message => {
     case 'remove':
       commands.remove(message, args);
       break;
+    case 'help':
+      commands.help(message, args);
+      break;
   }
 });
 
 bot.login(token);
-
-// Function needed for various commands
-function sell(message, args){
-  if(message.channel.id == admin_channel_id && message.member.roles.cache.find(role => role.name == admin_role)){
-    const embed = new Discord.MessageEmbed()
-    .setColor('#0099ff')
-    .setTitle('Sellers')
-    .setDescription('Sellers\n\nSellers\n\nSellers')
-    .setTimestamp()
-    .setFooter('Generated and maintained by BMBot Team');
-    message.channel.send(embed);
-  }
-}

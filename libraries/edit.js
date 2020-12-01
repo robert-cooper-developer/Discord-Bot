@@ -13,7 +13,6 @@ async function sellAdd(args) {
 
   // Update all the variables
   args.forEach(function(arg) {
-    console.log(arg.trim());
     var split = arg.split(":");
     if(split.length > 1){
       if(split[0].trim() == "Discord"){
@@ -45,7 +44,6 @@ async function sellAdd(args) {
       .on('error', reject)
       .pipe(csv())
       .on('data', (row) => {
-        console.log(row);
         values.push(row);
         var str = `Discord: ${row.Discord} |`;
 
@@ -87,8 +85,6 @@ async function sellAdd(args) {
 
   values.push(new_ob);
 
-  console.log(values);
-
   // Write new document with new person included
   const createCsvWriter = require('csv-writer').createObjectCsvWriter;
   const csvWriter = createCsvWriter({
@@ -106,7 +102,7 @@ async function sellAdd(args) {
 
   csvWriter
     .writeRecords(values)
-    .then(()=> console.log('The CSV file was written successfully'));
+    .then(()=> console.log('Storage successfully updated.'));
 
   return full;
 }
@@ -146,7 +142,6 @@ async function sellRemove(args) {
 
   // Update all the variables
   args.forEach(function(arg) {
-    console.log(arg.trim());
     var split = arg.split(":");
     if(split.length > 1){
       if(split[0].trim() == "Discord"){
@@ -192,8 +187,6 @@ async function sellRemove(args) {
 
   await reading;
 
-  console.log(values);
-
   // Write new document with new person included
   const createCsvWriter = require('csv-writer').createObjectCsvWriter;
   const csvWriter = createCsvWriter({
@@ -211,7 +204,7 @@ async function sellRemove(args) {
 
   csvWriter
     .writeRecords(values)
-    .then(()=> console.log('The CSV file was written successfully'));
+    .then(()=> console.log('Storage successfully updated.'));
 
   return full;
 }
@@ -228,7 +221,6 @@ async function buyAdd(args) {
 
   // Update all the variables
   args.forEach(function(arg) {
-    console.log(arg.trim());
     var split = arg.split(":");
     if(split.length > 1){
       if(split[0].trim() == "Discord"){
@@ -260,7 +252,6 @@ async function buyAdd(args) {
       .on('error', reject)
       .pipe(csv())
       .on('data', (row) => {
-        console.log(row);
         values.push(row);
         var str = `Discord: ${row.Discord} |`;
 
@@ -302,8 +293,6 @@ async function buyAdd(args) {
 
   values.push(new_ob);
 
-  console.log(values);
-
   // Write new document with new person included
   const createCsvWriter = require('csv-writer').createObjectCsvWriter;
   const csvWriter = createCsvWriter({
@@ -321,7 +310,7 @@ async function buyAdd(args) {
 
   csvWriter
     .writeRecords(values)
-    .then(()=> console.log('The CSV file was written successfully'));
+    .then(()=> console.log('Storage successfully updated.'));
 
   return full;
 }
@@ -361,7 +350,6 @@ async function buyRemove(args) {
 
   // Update all the variables
   args.forEach(function(arg) {
-    console.log(arg.trim());
     var split = arg.split(":");
     if(split.length > 1){
       if(split[0].trim() == "Discord"){
@@ -407,8 +395,6 @@ async function buyRemove(args) {
 
   await reading;
 
-  console.log(values);
-
   // Write new document with new person included
   const createCsvWriter = require('csv-writer').createObjectCsvWriter;
   const csvWriter = createCsvWriter({
@@ -426,7 +412,7 @@ async function buyRemove(args) {
 
   csvWriter
     .writeRecords(values)
-    .then(()=> console.log('The CSV file was written successfully'));
+    .then(()=> console.log('Storage successfully updated.'));
 
   return full;
 }
@@ -502,8 +488,6 @@ async function cashoutAdd(args) {
 
   values.push(new_ob);
 
-  console.log(values);
-
   // Write new document with new person included
   const createCsvWriter = require('csv-writer').createObjectCsvWriter;
   const csvWriter = createCsvWriter({
@@ -519,7 +503,7 @@ async function cashoutAdd(args) {
 
   csvWriter
     .writeRecords(values)
-    .then(()=> console.log('The CSV file was written successfully'));
+    .then(()=> console.log('Storage successfully updated.'));
 
   return full;
 }
@@ -554,7 +538,6 @@ async function cashoutRemove(args) {
 
   // Update all the variables
   args.forEach(function(arg) {
-    console.log(arg.trim());
     var split = arg.split(":");
     if(split.length > 1){
       if(split[0].trim() == "Discord"){
@@ -594,8 +577,6 @@ async function cashoutRemove(args) {
 
   await reading;
 
-  console.log(values);
-
   // Write new document with new person included
   const createCsvWriter = require('csv-writer').createObjectCsvWriter;
   const csvWriter = createCsvWriter({
@@ -611,7 +592,7 @@ async function cashoutRemove(args) {
 
   csvWriter
     .writeRecords(values)
-    .then(()=> console.log('The CSV file was written successfully'));
+    .then(()=> console.log('Storage successfully updated.'));
 
   return full;
 }
@@ -687,8 +668,6 @@ async function cashoutAdd(args) {
 
   values.push(new_ob);
 
-  console.log(values);
-
   // Write new document with new person included
   const createCsvWriter = require('csv-writer').createObjectCsvWriter;
   const csvWriter = createCsvWriter({
@@ -704,7 +683,7 @@ async function cashoutAdd(args) {
 
   csvWriter
     .writeRecords(values)
-    .then(()=> console.log('The CSV file was written successfully'));
+    .then(()=> console.log('Storage successfully updated.'));
 
   return full;
 }
@@ -739,7 +718,6 @@ async function cashoutRemove(args) {
 
   // Update all the variables
   args.forEach(function(arg) {
-    console.log(arg.trim());
     var split = arg.split(":");
     if(split.length > 1){
       if(split[0].trim() == "Discord"){
@@ -779,8 +757,6 @@ async function cashoutRemove(args) {
 
   await reading;
 
-  console.log(values);
-
   // Write new document with new person included
   const createCsvWriter = require('csv-writer').createObjectCsvWriter;
   const csvWriter = createCsvWriter({
@@ -796,7 +772,7 @@ async function cashoutRemove(args) {
 
   csvWriter
     .writeRecords(values)
-    .then(()=> console.log('The CSV file was written successfully'));
+    .then(()=> console.log('Storage successfully updated.'));
 
   return full;
 }
@@ -864,8 +840,6 @@ async function scammersAdd(args) {
 
   values.push(new_ob);
 
-  console.log(values);
-
   // Write new document with new person included
   const createCsvWriter = require('csv-writer').createObjectCsvWriter;
   const csvWriter = createCsvWriter({
@@ -879,7 +853,7 @@ async function scammersAdd(args) {
 
   csvWriter
     .writeRecords(values)
-    .then(()=> console.log('The CSV file was written successfully'));
+    .then(()=> console.log('Storage successfully updated.'));
 
   return full;
 }
@@ -914,12 +888,10 @@ async function scammersRemove(args) {
 
   // Update all the variables
   args.forEach(function(arg) {
-    console.log(arg.trim());
     var split = arg.split(":");
     if(split.length > 1){
       if(split[0].trim() == "Discord"){
         discord = split[1].trim();
-        console.log(discord);
       }
     }
   });
@@ -968,7 +940,7 @@ async function scammersRemove(args) {
 
   csvWriter
     .writeRecords(values)
-    .then(()=> console.log('The CSV file was written successfully'));
+    .then(()=> console.log('Storage successfully updated.'));
 
   return full;
 }
@@ -1041,7 +1013,7 @@ async function exchangeAdd(args) {
 
   csvWriter
     .writeRecords(values)
-    .then(()=> console.log('The CSV file was written successfully'));
+    .then(()=> console.log('Storage successfully updated.'));
 
   return full;
 }
@@ -1074,12 +1046,10 @@ async function exchangeRemove(args) {
 
   // Update all the variables
   args.forEach(function(arg) {
-    console.log(arg.trim());
     var split = arg.split(":");
     if(split.length > 1){
       if(split[0].trim() == "Discord"){
         discord = split[1].trim();
-        console.log(discord);
       }
     }
   });
@@ -1125,7 +1095,7 @@ async function exchangeRemove(args) {
 
   csvWriter
     .writeRecords(values)
-    .then(()=> console.log('The CSV file was written successfully'));
+    .then(()=> console.log('Storage successfully updated.'));
 
   return full;
 }
@@ -1198,7 +1168,7 @@ async function mmAdd(args) {
 
   csvWriter
     .writeRecords(values)
-    .then(()=> console.log('The CSV file was written successfully'));
+    .then(()=> console.log('Storage successfully updated.'));
 
   return full;
 }
@@ -1231,12 +1201,10 @@ async function mmRemove(args) {
 
   // Update all the variables
   args.forEach(function(arg) {
-    console.log(arg.trim());
     var split = arg.split(":");
     if(split.length > 1){
       if(split[0].trim() == "Discord"){
         discord = split[1].trim();
-        console.log(discord);
       }
     }
   });
@@ -1282,7 +1250,7 @@ async function mmRemove(args) {
 
   csvWriter
     .writeRecords(values)
-    .then(()=> console.log('The CSV file was written successfully'));
+    .then(()=> console.log('Storage successfully updated.'));
 
   return full;
 }
